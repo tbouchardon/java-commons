@@ -3,8 +3,9 @@ plugins {
 }
 
 group = "fr.ksuto"
-version = "1.1"
+version = "1.2"
 
 dependencies {
     implementation(libs.slf4j.api)
+    implementation(libs.flatlaf)
 }
