@@ -38,10 +38,6 @@ public class Painter extends JFrame {
         init(zone);
     }
     
-    public static void main(String[] args) {
-    
-    }
-    
     public void repaintWhiteBoard() {
         
         whiteBoard.repaint();
