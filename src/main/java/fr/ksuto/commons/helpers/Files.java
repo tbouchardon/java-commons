@@ -1,5 +1,8 @@
 package fr.ksuto.commons.helpers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -8,6 +11,8 @@ import java.io.IOException;
  * Created by thomas.bouchardon on 24/10/2016!
  */
 public class Files {
+    
+    private static final Logger logger = LoggerFactory.getLogger(Files.class);
     
     public static boolean moveFileTo(File oldFile, File newFile, boolean overWrite) {
         
@@ -35,7 +40,7 @@ public class Files {
         }
         catch (IllegalArgumentException | IOException iae) {
             
-            System.out.println("File Not Found");
+            logger.warn("Impossible d'ouvrir {}", file, iae);
         }
     }
 }
