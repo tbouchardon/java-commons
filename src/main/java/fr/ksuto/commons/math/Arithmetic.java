@@ -91,6 +91,23 @@ public class Arithmetic {
     }
     
     /**
+     * Sigmoïde : S(x) = 1 / (1 + e^-x)
+     */
+    public static double sigmoid(double x) {
+        
+        return 1 / (1 + Math.exp(-x));
+    }
+    
+    /**
+     * Dérivée de la sigmoïde : S'(x) = S(x) * (1 - S(x))
+     */
+    public static double sigmoidPrime(double x) {
+        
+        double s = sigmoid(x);
+        return s * (1 - s);
+    }
+    
+    /**
      * @param a Le point A
      * @param m la pente de la droite
      * @param p l'ordonnée dela droite

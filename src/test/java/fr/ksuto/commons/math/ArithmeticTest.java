@@ -163,4 +163,13 @@ class ArithmeticTest {
         
         painter.repaintWhiteBoard();
     }
+    
+    @Test
+    void sigmoid() {
+        
+        Assertions.assertEquals(0.5, Arithmetic.sigmoid(0));
+        Assertions.assertEquals(0.8807970779778823, Arithmetic.sigmoid(2), 1e-12);
+        Assertions.assertEquals(1 - Arithmetic.sigmoid(2), Arithmetic.sigmoid(-2), 1e-12);
+        Assertions.assertEquals(0.25, Arithmetic.sigmoidPrime(0));
+    }
 }
